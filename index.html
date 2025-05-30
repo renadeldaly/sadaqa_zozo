@@ -1,10 +1,152 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-  <title>sadaqa_zozo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>صدقه جاريه على روح تيته زوزو</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #f3f3f3;
+      color: #333;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .counter {
+      font-size: 28px;
+      margin: 5px 0 15px;
+      color: #16a085;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #555;
+    }
+    .surah-text {
+      font-size: 18px;
+      color: #444;
+      margin: 10px 0 20px;
+      line-height: 1.8;
+    }
+    /* تعديل لموضع الصورة والنص فوق الشمال */
+    .logo-section {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-align: right;
+      color: #777;
+      font-size: 16px;
+      direction: rtl;
+    }
+    .logo-section img {
+      max-width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-  <h1>مرحبًا بك في sadaqa_zozo!</h1>
-  <p>هذا هو موقعي الأول على GitHub Pages.</p>
+  <div class="logo-section">
+    <div>
+      صدقة جارية عن روح تيته زوزو<br />من حفيدتك ريناد الدالي
+    </div>
+    <img src="img20.png.jpg" alt="لوجو سبحة" />
+  </div>
+
+  <h1>صدقه جاريه على روح تيته زوزو </h1>
+  <p>انوي الذكر واحتسب الأجر، واجعل دعاءك لتيته زوزو بالرحمة والمغفرة 🤍</p>
+
+  <div class="section">
+    <h2>الأذكار</h2>
+    <div>
+      <div>سبحان الله: <span class="counter" id="subhan">0</span></div>
+      <button class="button" onclick="increment('subhan', 33)">سبحان الله</button>
+
+      <div>الحمد لله: <span class="counter" id="hamd">0</span></div>
+      <button class="button" onclick="increment('hamd', 33)">الحمد لله</button>
+
+      <div>الله أكبر: <span class="counter" id="akbar">0</span></div>
+      <button class="button" onclick="increment('akbar', 34)">الله أكبر</button>
+
+      <div>لا إله إلا الله وحده لا شريك له <br> له الملك وله الحمد وهو على كل شيء قدير: <span class="counter" id="lahawla">0</span></div>
+      <button class="button" onclick="increment('lahawla')">لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير</button>
+
+      <div>لا حول ولا قوة إلا بالله: <span class="counter" id="la_hawl">0</span></div>
+      <button class="button" onclick="increment('la_hawl')">لا حول ولا قوة إلا بالله</button>
+
+      <div>استغفر الله: <span class="counter" id="estghfar">0</span></div>
+      <button class="button" onclick="increment('estghfar')">استغفر الله العظيم</button>
+
+      <div>اللهم صلِّ على محمد: <span class="counter" id="allahom">0</span></div>
+      <button class="button" onclick="increment('allahom')">اللهم صلِّ على محمد</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>السور القصيرة</h2>
+
+    <div>
+      <h3>سورة الإخلاص</h3>
+      <div class="surah-text">
+        قُلْ هُوَ ٱللَّهُ أَحَدٌ ﴿1﴾ ٱللَّهُ ٱلصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌ ﴿4﴾
+      </div>
+      <div>عدد مرات القراءة: <span class="counter" id="ikhlas">0</span></div>
+      <button class="button" onclick="increment('ikhlas')">قراءة الإخلاص</button>
+
+      <h3>سورة الفلق</h3>
+      <div class="surah-text">
+        قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿1﴾ مِن شَرِّ مَا خَلَقَ ﴿2﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿3﴾ وَمِن شَرِّ ٱلنَّفَّـٰثَٰتِ فِى ٱلْعُقَدِ ﴿4﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾
+      </div>
+      <div>عدد مرات القراءة: <span class="counter" id="falaq">0</span></div>
+      <button class="button" onclick="increment('falaq')">قراءة الفلق</button>
+
+      <h3>سورة الناس</h3>
+      <div class="surah-text">
+        قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿1﴾ مَلِكِ ٱلنَّاسِ ﴿2﴾ إِلَـٰهِ ٱلنَّاسِ ﴿3﴾ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ﴿4﴾ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ﴿5﴾ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ﴿6﴾
+      </div>
+      <div>عدد مرات القراءة: <span class="counter" id="nas">0</span></div>
+      <button class="button" onclick="increment('nas')">قراءة الناس</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    اللهم اجعل هذا الذكر في ميزان حسنات تيته زوزو، واغفر لها، وارحمها، واجعل قبرها روضة من رياض الجنة.<br />
+    دعواتكم لها بالرحمة والمغفرة 🤍
+  </div>
+
+  <script>
+    function increment(id, max) {
+      const counter = document.getElementById(id);
+      let current = parseInt(counter.textContent);
+      if (max && current >= max) return;
+      counter.textContent = current + 1;
+    }
+  </script>
 </body>
 </html>
